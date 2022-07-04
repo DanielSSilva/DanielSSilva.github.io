@@ -1,0 +1,5 @@
+customMenus:
+- name: Blog
+  url: https://blog.danielssilva.dev/
+  hideFromNavbar: false
+  showOnFooter: false
