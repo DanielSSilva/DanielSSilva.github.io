@@ -32,3 +32,9 @@ params:
   footer: 
     enable: false
   background: "images/background/coast.jpeg"
+
+  features:
+    analytics:
+      enabled: true
+      google:
+        id: G-6H5T7PXLSM
