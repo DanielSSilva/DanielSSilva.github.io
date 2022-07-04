@@ -1,0 +1,34 @@
+baseURL: https://www.danielssilva.dev
+
+languageCode: en-us
+title: "Daniel Silva"
+theme: "toha"
+
+# Manage languages
+# For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
+languages:
+  en:
+    languageName: English
+    weight: 1
+
+# Control TOC depth
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+# Enable global emoji support
+enableEmoji: true
+
+# Site parameters
+params:
+  # GitHub repo URL of your site
+  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+
+  # specify whether you want to write some blog posts or not
+  enableBlogPost: false
+  
+  footer: 
+    enable: false
+  background: "images/background/coast.jpeg"

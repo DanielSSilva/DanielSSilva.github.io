@@ -1,0 +1,97 @@
+section:
+  name: Presentations
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: DevOps
+  filter: "DevOps"
+- name: PowerShell
+  filter: "PowerShell"
+- name: SQL
+  filter: "SQL"
+- name: IoT
+  filter: "IoT"
+
+
+# your projects
+projects:
+- name: "Streamlining your Code from the IDE to Production"
+  #logo: /images/presentations/psconfeu.png
+  role: Building the Future
+  timeline: "January 2022"
+  url: "https://www.youtube.com/watch?v=jHdhixi9mvg"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: A presentation (in portuguese) showing the process to deploy the code from the development into production, using DevOps practices.
+  tags: ["DevOps", "Azure", "CI/CD"]
+
+
+- name: "Dev Talks Webinares - DevOps/Cria pipelines com ferramentas de CI/CD"
+  #logo: /images/presentations/psconfeu.png
+  role: Xpand IT
+  timeline: "December 2021"
+  url: "https://www.youtube.com/watch?v=k4uorXhguNA&list=PL57O7tm6D3i4XlLLw3u3Q8zfFbTgQo_N_"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: A presentation (in portuguese) about DevOps, what is it and an example on how to create pipelines with CI/CD tools
+  tags: ["DevOps", "Azure", "CI/CD"]
+
+
+- name: "Setting up and developing SQLServer on non-Windows OS"
+  #logo: /images/presentations/psconfeu.png
+  role: SQLPort
+  timeline: "September 2019"
+  #repo: https://github.com/DanielSSilva/Presentations/tree/master/2019_09_24%20-%20Setting%20up%20and%20developing%20SQLServer%20on%20non-Windows%20OS # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  url: "https://github.com/DanielSSilva/Presentations/tree/master/2019_09_24%20-%20Setting%20up%20and%20developing%20SQLServer%20on%20non-Windows%20OS"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: A presentation (not recorded) showing how to setup SQLServer environment on non-Windows OS using containers.
+  tags: ["SQL", "Docker"]
+
+- name: "PowerShell on RaspberryPi - Let's open a door for your PowerShell ideas"
+  #logo: /images/presentations/psconfeu.png
+  role: PSConfEU
+  timeline: "June 2019"
+  #repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  url: "https://www.youtube.com/watch?v=DMQC2ErWaq8"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: An introduction to PowerShell and IoT using RaspberryPi
+  tags: ["PowerShell", "IoT", "RaspberryPi"]
+
+- name: "Control sensors and chips using PowerShell"
+  #logo: /images/presentations/psconfeu.png
+  role: PSConfEU
+  timeline: "June 2019"
+  #repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  url: "https://www.youtube.com/watch?v=S17dT1mQLGI"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: A presentation that includes using multiple chips and sensors such as LEDs, humidity sensors, etc 
+  tags: ["PowerShell", "IoT", "RaspberryPi"]
+
+- name: "Power your Raspberry Shell on it's Core - Raspberry Pi and PowerShell Core"
+  #logo: /images/presentations/psconfeu.png
+  role: ANZPSUG
+  timeline: "October 2018"
+  #repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  url: "https://www.youtube.com/watch?v=5m9PnWBF1vI"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Presentation similar to the one for DuPSUG with a more deep dive into PowerShell IoT module
+  tags: ["PowerShell", "IoT", "RaspberryPi"]
+
+
+- name: "Flash presentation about PowerShell IoT"
+  #logo: /images/presentations/psconfeu.png
+  role: PSPowerHour
+  timeline: "August 2018"
+  #repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  url: "https://www.youtube.com/watch?v=fDQvdIEda_c&t=3278s"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: A 10 minute "flash" presentation about the PowerShell IoT.
+  tags: ["PowerShell", "IoT", "RaspberryPi"]
+
+- name: "Power your Raspberry Shell on it's Core - Raspberry Pi and PowerShell Core"
+  #logo: /images/presentations/psconfeu.png
+  role: DuPSUG
+  timeline: "June 2018"
+  #repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  url: "https://www.youtube.com/watch?v=S17dT1mQLGI"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Introduction to RaspberryPi and PowerShell Core running on it, showing how and why this is possible, setup, and much more.
+  tags: ["PowerShell", "IoT", "RaspberryPi"]

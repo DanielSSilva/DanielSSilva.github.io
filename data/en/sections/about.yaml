@@ -1,0 +1,60 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# # your designation
+# designation: Software Engineer
+# # your company information
+# company:
+#   name: Example Co.
+#   url: "https://www.example.com"
+
+
+# a summary about you
+summary: 'I am a DevOps Engineer with a huge passion for automation and helping the others. Combining that, I usually automate processes that are boring, time consuming, or error prone. Also love and advocate frameworks and technology such as PowerShell, Terraform, Dcoker and Kubernetes. From time to time, I like to spend time inventing new projects to work on.'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Github
+  icon: "fab fa-github"
+  url: "https://github.com/DanielSSilva"
+
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "https://twitter.com/DanielSilv9"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/danielssilva/"
+
+- name: Youtube
+  icon: "fab fa-youtube"
+  url: "https://www.youtube.com/channel/UCpdLmETWFj0H3rv2JIgzPHg"
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+# softSkills:
+# - name: Leadership
+#   percentage: 85
+#   color: blue
+# - name: Team Work
+#   percentage: 90
+#   color: yellow
+
+badges:
+- type: certification
+  name: "Microsoft Certified: DevOps Engineer Expert"
+  url: "https://www.credly.com/badges/4189b24d-8f48-4c26-a25a-a30ac0645d60/public_url"
+  badge: "https://images.credly.com/size/220x220/images/c3ab66f8-5d59-4afa-a6c2-0ba30a1989ca/CERT-Expert-DevOps-Engineer-600x600.png"
+
+- type: certification
+  name: "Microsoft Certified: Azure Developer Associate"
+  url: "https://www.credly.com/badges/4189b24d-8f48-4c26-a25a-a30ac0645d60/public_url"
+  badge: "https://images.credly.com/size/220x220/images/63316b60-f62d-4e51-aacc-c23cb850089c/azure-developer-associate-600x600.png"
