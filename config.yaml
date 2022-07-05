@@ -28,7 +28,8 @@ params:
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: false
-  
+  logo:
+    favicon: "images/favicon.png"
   footer: 
     enable: false
   background: "images/background/background.png"
