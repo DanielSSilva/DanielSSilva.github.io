@@ -16,7 +16,8 @@ section:
 
 
 # a summary about you
-summary: 'I am a DevOps Engineer with a huge passion for automation and helping the others. Combining that, I usually automate processes that are boring, time consuming, or error prone. Also love and advocate frameworks and technology such as PowerShell, Terraform, Docker and Kubernetes. From time to time, I like to spend time inventing new projects to work on.'
+summary: 'Daniel is a DevOps engineer whose main goal is helping teams become more agile and autonomous, and also ensuring that everything is rolling smoothly.
+Due to his love for automation (and also laziness), he focus on automating processes that are boring, time-consuming, or error-prone, mainly focused on optimizing pipelines and ensuring that every team is focused on their tasks. He also loves and advocates frameworks and technology such as PowerShell, Terraform, and Docker, as well as self-hosting and Homelabs.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
