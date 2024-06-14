@@ -4,9 +4,8 @@ name: "Daniel Silva"
 greeting: "Hi 👋🏼. I am "
 image: "images/author/avatar.png"
 # give your some contact information. they will be used in the footer
-# contactInfo:
-#   email: "johndoe@example.com"
-#   phone: "+0123456789"
+contactInfo:
+  email: "devops@danielssilva.com"
 
 # some summary about what you do
 summary:

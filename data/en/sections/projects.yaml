@@ -23,6 +23,15 @@ buttons:
 
 # your projects
 projects:
+- name: "Leverage from Pester to automate Azure Storage Account testing"
+  #logo: /images/presentations/psconfeu.png
+  role: 2023 PowerShell + DevOps Global Summit
+  timeline: "April 2023"
+  url: "https://www.youtube.com/watch?v=2O1QKVzzovU"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: A presentation going into detail on how automated Pester tests in CI/CD pipelines can help users ensure they are following proper configuration and  compliance.
+  tags: ["DevOps", "Azure", "CI/CD", "PowerShell"]
+
+
 - name: "Streamlining your Code from the IDE to Production"
   #logo: /images/presentations/psconfeu.png
   role: Building the Future
