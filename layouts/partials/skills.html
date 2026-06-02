@@ -1,0 +1,81 @@
+{{- $skills := index site.Data site.Language.Lang "sections" "skills" -}}
+{{- $labels := dict "5" "Deep production" "4" "Solid production" "3" "Working knowledge" "2" "Some hands-on" "1" "Exploring" -}}
+{{- $descriptions := dict
+  "5" "own it end-to-end"
+  "4" "confident in most production situations"
+  "3" "Can navigate through it, but still learning the edges"
+  "2" "some hands-on, not ready to own it solo"
+  "1" "Interest in learning, or surface-level familiarity" -}}
+{{- /* headline level = the strongest tool in the category; the average breaks
+       ties so deeper-overall areas rank first within the same max */ -}}
+{{- $cats := slice -}}
+{{- range $skills.categories -}}
+  {{- $sum := 0 -}}
+  {{- $max := 0 -}}
+  {{- range .tools -}}
+    {{- $l := .level | default 3 -}}
+    {{- $sum = add $sum $l -}}
+    {{- if gt $l $max }}{{ $max = $l }}{{ end -}}
+  {{- end -}}
+  {{- $avg := div (float $sum) (len .tools) -}}
+  {{- $rank := add (mul $max 100) $avg -}}
+  {{- $cats = $cats | append (dict "name" .name "note" .note "tools" .tools "rank" $rank "level" $max) -}}
+{{- end -}}
+<section id="skills" class="skills">
+  <h2>{{ $skills.section.name }}</h2>
+  <ul class="accordion skill-accordion">
+    {{- range sort $cats "rank" "desc" }}
+    {{- $lvl := .level -}}
+    <li class="skill" data-level="{{ $lvl }}">
+      <details>
+        <summary>
+          <span class="acc-chevron" aria-hidden="true"></span>
+          <span class="skill-head">
+            <span class="skill-name">{{ .name }}</span>
+            <span class="acc-count" aria-label="{{ len .tools }} tools">{{ len .tools }}</span>
+            <span class="skill-dots" role="meter" aria-valuemin="0" aria-valuemax="5" aria-valuenow="{{ $lvl }}" aria-label="{{ .name }}: {{ index $labels (string $lvl) }}">
+              {{- range $i := seq 5 }}
+              <span class="dot{{ if le $i $lvl }} on{{ end }}"></span>
+              {{- end }}
+            </span>
+          </span>
+        </summary>
+        <div class="acc-body">
+          {{- with .note }}<p class="skill-note">{{ . }}</p>{{ end }}
+          <ul class="tool-list">
+            {{- range sort .tools "level" "desc" }}
+            {{- $tlvl := .level | default 3 -}}
+            <li class="skill" data-level="{{ $tlvl }}">
+              <div class="skill-head">
+                <span class="skill-name">{{ .name }}</span>
+                <span class="skill-dots" role="meter" aria-valuemin="0" aria-valuemax="5" aria-valuenow="{{ $tlvl }}" aria-label="{{ .name }}: {{ index $labels (string $tlvl) }}">
+                  {{- range $i := seq 5 }}
+                  <span class="dot{{ if le $i $tlvl }} on{{ end }}"></span>
+                  {{- end }}
+                </span>
+              </div>
+            </li>
+            {{- end }}
+          </ul>
+        </div>
+      </details>
+    </li>
+    {{- end }}
+  </ul>
+  <dl class="skill-legend" aria-label="Proficiency scale">
+    {{- range $lvl := seq 5 1 }}
+    {{- $k := string $lvl -}}
+    <div class="legend-item" data-level="{{ $lvl }}">
+      <dt>
+        <span class="skill-dots" aria-hidden="true">
+          {{- range $i := seq 5 }}
+          <span class="dot{{ if le $i $lvl }} on{{ end }}"></span>
+          {{- end }}
+        </span>
+        <span class="legend-label">{{ index $labels $k }}</span>
+      </dt>
+      <dd>{{ index $descriptions $k }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+</section>

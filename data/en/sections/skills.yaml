@@ -1,0 +1,59 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+
+# Each category groups related tools; every tool carries its own proficiency
+# level (1–5). The category's headline level is derived at render time from the
+# strongest tool in the group (see layouts/partials/skills.html).
+#   5 — Deep production; own it end-to-end
+#   4 — Solid production; confident in most situations
+#   3 — Working knowledge; productive but still learning the edges
+#   2 — Some hands-on; would not own it alone yet
+#   1 — Exploring / surface-level familiarity
+categories:
+  - name: Infrastructure as Code
+    tools:
+      - { name: Terraform, level: 5 }
+      - { name: Terraform Cloud, level: 4 }
+
+  - name: Cloud — Azure
+    tools:
+      - { name: Storage Accounts, level: 5 }
+      - { name: Key Vault, level: 5 }
+      - { name: VNets, level: 4 }
+      - { name: Private Endpoints, level: 4 }
+      - { name: Entra ID, level: 4 }
+      - { name: App Service, level: 3 }
+      - { name: Functions, level: 3 }
+      - { name: Container Apps, level: 3 }
+      - { name: Monitor / Log Analytics, level: 3 }
+
+  - name: Git & CI/CD
+    tools:
+      - { name: GitHub, level: 4 }
+      - { name: Azure DevOps, level: 4 }
+      - { name: GitLab, level: 5 }
+
+  - name: Programming & Scripting
+    tools:
+      - { name: PowerShell, level: 4 }
+      - { name: Bash, level: 3 }
+      - { name: Python, level: 3 }
+      - { name: C# / .NET, level: 4 }
+      - { name: Go, level: 1 }
+
+  - name: Containers & Orchestration
+    tools:
+      - { name: Docker, level: 4 }
+      - { name: Compose, level: 4 }
+      - { name: Kubernetes, level: 2 }
+
+  - name: Other Clouds
+    note: Interested in exploring other cloud platforms but no production experience yet — Azure-only so far.
+    tools:
+      - { name: AWS, level: 1 }
+      - { name: GCP, level: 1 }

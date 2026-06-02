@@ -7,47 +7,33 @@ section:
   showOnNavbar: true
   template: sections/about.html
 
-# # your designation
-# designation: Software Engineer
-# # your company information
-# company:
-#   name: Example Co.
-#   url: "https://www.example.com"
-
+# your designation
+designation: DevOps Engineer
 
 # a summary about you
-summary: 'Daniel is a DevOps engineer whose main goal is helping teams become more agile and autonomous, and also ensuring that everything is rolling smoothly.
-Due to his love for automation (and also laziness), he focus on automating processes that are boring, time-consuming, or error-prone, mainly focused on optimizing pipelines and ensuring that every team is focused on their tasks. He also loves and advocates frameworks and technology such as PowerShell, Terraform, and Docker, as well as self-hosting and Homelabs.'
+summary: |
+  If something's boring, slow, or easy to get wrong by hand, I'll find a way to automate it — that's the part of the job I enjoy the most.
+
+  I also like to speak at conferences to share what I've learned (and what blew up along the way) with the community.
+
+  I have a [technical blog](https://blog.danielssilva.dev/) where I write about DevOps, Azure, PowerShell and whatever homelab project I'm currently breaking.
+
+  Based in Portugal 🇵🇹 — EU citizen, full remote preferred.
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
 socialLinks:
-- name: Github
+- name: Email
+  icon: "fas fa-envelope"
+  url: "mailto:devops@danielssilva.com"
+
+- name: GitHub
   icon: "fab fa-github"
   url: "https://github.com/DanielSSilva"
-
-- name: Twitter
-  icon: "fab fa-twitter"
-  url: "https://twitter.com/DanielSilv9"
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/danielssilva/"
-
-- name: Youtube
-  icon: "fab fa-youtube"
-  url: "https://www.youtube.com/channel/UCpdLmETWFj0H3rv2JIgzPHg"
-
-# your soft skills
-# give the percentage between 50 to 100 with 5 intervals.
-# currently supported colors: blue, yellow, pink, green, sky, orange
-# softSkills:
-# - name: Leadership
-#   percentage: 85
-#   color: blue
-# - name: Team Work
-#   percentage: 90
-#   color: yellow
 
 badges:
 - type: certification

@@ -1,0 +1,167 @@
+/* ----------------------------------------------------------------------------
+ * Hugo-profile-inspired palette ported to Toha.
+ *
+ * Light mode: light grey bg, white cards, Bootstrap blue accent.
+ * Dark mode:  near-black bg, dark cards, mint/cyan #64ffda accent.
+ * -------------------------------------------------------------------------- */
+
+// ---- palette tokens ----
+$hp-light-bg: #eaedf0;
+$hp-light-card: #ffffff;
+$hp-light-text: #343a40;
+$hp-light-text-muted: #6c757d;
+$hp-light-accent: #007bff;
+$hp-light-accent-hover: #0056b3;
+
+$hp-dark-bg: #18191a;
+$hp-dark-card: #212529;
+$hp-dark-text: #e4e6eb;
+$hp-dark-text-muted: #b0b3b8;
+$hp-dark-accent: #64ffda;
+$hp-dark-accent-hover: #9effec;
+
+// ---- hide the home hero background image (use palette color instead) ----
+// Also kills the scale/blur transforms that caused an edge seam against the body bg.
+.home .background,
+#homePageBackgroundImageDivStyled {
+  background-image: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+html, body { background-color: $hp-light-bg; }
+html[data-theme='light'],
+html[data-theme='light'] body,
+html[data-theme='light'] .home,
+html[data-theme='light'] #homePageBackgroundImageDivStyled,
+html[data-theme='light'] .bg-primary,
+html[data-theme='light'] .bg-secondary,
+html[data-theme='light'] .section-holder {
+  background-color: $hp-light-bg !important;
+}
+html[data-theme='dark'],
+html[data-theme='dark'] body,
+html[data-theme='dark'] .home,
+html[data-theme='dark'] #homePageBackgroundImageDivStyled,
+html[data-theme='dark'] .bg-primary,
+html[data-theme='dark'] .bg-secondary,
+html[data-theme='dark'] .section-holder {
+  background-color: $hp-dark-bg !important;
+}
+
+// =============================== LIGHT MODE ================================
+html[data-theme='light'] {
+  background-color: $hp-light-bg;
+  color: $hp-light-text;
+
+  body { background-color: $hp-light-bg; color: $hp-light-text; }
+
+  .navbar,
+  .top-navbar,
+  .top-navbar.homepage { background-color: $hp-light-bg !important; }
+
+  // navbar links readable on light bg
+  .navbar .nav-link,
+  .navbar .navbar-brand,
+  .navbar a { color: $hp-light-text !important; }
+  .navbar .nav-link:hover,
+  .navbar a:hover { color: $hp-light-accent !important; }
+
+  // theme selector icons dark on light bg
+  // Toha's JS toggles .svg-inverted on the navbar icon while the navbar is
+  // transparent (top of page) — that was for white-on-dark-hero. Force dark.
+  .navbar img.theme-icon,
+  .navbar img.theme-icon.svg-inverted,
+  #navbar-theme-icon-svg,
+  #navbar-theme-icon-svg.svg-inverted { filter: none !important; }
+  .dropdown-menu { background-color: $hp-light-card !important; }
+  .dropdown-menu img.theme-icon { filter: none !important; }
+
+  // hero text readable on light bg (was light-on-accent originally)
+  .home,
+  .home .greeting,
+  .home .greeting-subtitle,
+  .home .typing-carousel,
+  .home .arrow,
+  .home .typed { color: $hp-light-text !important; }
+
+  .card,
+  .card-head,
+  .skills-section .card .card-head {
+    background-color: $hp-light-card !important;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .card-title { color: $hp-light-text; }
+
+  a { color: $hp-light-accent; }
+  a:hover { color: $hp-light-accent-hover; }
+
+  // skill-card tools and tag-style badges
+  .badge.btn-info,
+  .btn.badge.btn-info {
+    background-color: rgba($hp-light-accent, 0.12) !important;
+    color: $hp-light-accent !important;
+    border: 1px solid rgba($hp-light-accent, 0.4) !important;
+  }
+}
+
+// =============================== DARK MODE =================================
+html[data-theme='dark'] {
+  background-color: $hp-dark-bg;
+  color: $hp-dark-text;
+
+  body { background-color: $hp-dark-bg; color: $hp-dark-text; }
+
+  // primary surfaces
+  .skills-section,
+  .about-section,
+  .experiences-section,
+  .education-section,
+  .achievements-section,
+  .accomplishments-section,
+  .projects-section,
+  .publications-section,
+  .recent-posts-section {
+    background-color: $hp-dark-bg !important;
+  }
+
+  // cards
+  .card { background-color: $hp-dark-card !important; }
+  .skills-section .card .card-head,
+  .card .card-head { background-color: $hp-dark-card !important; }
+
+  // text + headings
+  h1, h2, h3, h4, h5, h6,
+  .card-title,
+  .heading { color: $hp-dark-text !important; }
+
+  p, li, .card-text { color: $hp-dark-text; }
+  .text-muted, .muted { color: $hp-dark-text-muted !important; }
+
+  // links + accents
+  a { color: $hp-dark-accent; }
+  a:hover { color: $hp-dark-accent-hover; }
+
+  // accent borders (Toha uses accent-color around card heads, etc.)
+  .skills-section .card .card-head {
+    border-bottom: 0.0625rem solid rgba($hp-dark-accent, 0.4) !important;
+  }
+
+  // skill-card tools and tag-style badges — the iconic mint pill
+  .badge.btn-info,
+  .btn.badge.btn-info {
+    background-color: rgba($hp-dark-accent, 0.1) !important;
+    color: $hp-dark-accent !important;
+    border: 1px solid rgba($hp-dark-accent, 0.4) !important;
+  }
+
+  // navbar/footer surfaces
+  .navbar,
+  .top-navbar,
+  .top-navbar.homepage { background-color: $hp-dark-bg !important; }
+  .footer { background-color: $hp-dark-card !important; color: $hp-dark-text; }
+
+  // icon hover accents
+  .fas, .fab, .far { color: $hp-dark-text; }
+  a:hover .fas, a:hover .fab, a:hover .far { color: $hp-dark-accent; }
+}

@@ -1,0 +1,57 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your experiences
+experiences:
+- company:
+    name: RELEX Solutions
+  positions:
+  - designation: Lead DevOps Engineer
+    start: April 2022
+    end: May 2026
+    
+    responsibilities:
+    - Design and own scalable infrastructure deployment for hundreds of customer environments.
+    - Drive Terraform + automated CI/CD pipelines for on-demand provisioning at scale.
+    - Work across multiple product teams to ensure consistency and clean integrations.
+    - Engage directly with customers to clarify issues and push best practices.
+    - Proactively identify bottlenecks and anticipate infrastructure issues before they arise.
+
+- company:
+    name: Xpand IT
+  positions:
+  - designation: DevOps Engineer
+    start: September 2020
+    end: March 2022
+    responsibilities:
+    - Designed and implemented CI/CD pipelines, IaC, and scalable solutions.
+    - Advocate DevOps practices, by doing hands-on work and sharing knowledge with teams and customers.
+    - Built reusable pipeline templates and IaC modules adopted across client teams.
+
+- company:
+    name: Qevo
+  positions:
+  - designation: Backend Developer
+    start: July 2017
+    end: August 2020
+    responsibilities:
+    - Developed and maintained Web APIs.
+    - Designed and maintained SQL Server databases, with optimized queries. 
+
+- company:
+    name: VTXRM
+    location: Portugal
+  positions:
+  - designation: Technical Support
+    start: July 2017
+    end: August 2020
+    responsibilities:
+    - Bug analysis and triage; bridge between the dev team and clients.
+    - First point of contact for client information and bug reports.

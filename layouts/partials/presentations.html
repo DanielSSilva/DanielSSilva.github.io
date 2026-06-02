@@ -1,0 +1,26 @@
+{{- $proj := index site.Data site.Language.Lang "sections" "projects" -}}
+<section id="{{ $proj.section.id }}" class="presentations">
+  <h2>{{ $proj.section.name }}</h2>
+  <ul class="talks-grid">
+    {{- range $proj.projects }}
+    <li class="talk">
+      <div class="talk-head">
+        <h3 class="talk-title-text">{{ .name }}</h3>
+        <p class="talk-meta">
+          {{- with .role }}<span class="talk-venue">{{ . }}</span>{{ end }}
+          {{- with .timeline }}<span class="talk-date">{{ . }}</span>{{ end }}
+        </p>
+      </div>
+      {{- with .summary }}<p class="talk-summary">{{ . }}</p>{{ end }}
+      <div class="talk-foot">
+        {{- with .tags }}
+        <ul class="talk-tags">
+          {{- range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{- end }}
+        {{- with .url }}<a class="talk-link" href="{{ . }}" target="_blank" rel="noopener">{{ if in . "youtu" }}Watch{{ else }}View{{ end }} ↗</a>{{ end }}
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+</section>

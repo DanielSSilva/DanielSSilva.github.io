@@ -1,0 +1,52 @@
+{{- $exp := index site.Data site.Language.Lang "sections" "experiences" -}}
+<section id="experience" class="experience">
+  <h2>{{ $exp.section.name }}</h2>
+  <ol class="timeline">
+    {{- range $exp.experiences }}
+    <li class="tl-item">
+      <div class="tl-marker" aria-hidden="true"></div>
+      <div class="tl-content">
+        <p class="tl-company">
+          {{ if .company.url }}<a href="{{ .company.url }}" target="_blank" rel="noopener">{{ .company.name }}</a>{{ else }}{{ .company.name }}{{ end }}
+          {{ with .company.location }}<span class="tl-location">· {{ . }}</span>{{ end }}
+        </p>
+        {{ with .company.overview }}<p class="tl-overview">{{ . }}</p>{{ end }}
+        {{- range .positions }}
+        <div class="tl-position">
+          <p class="tl-dates">
+            {{ .start }} <span class="sep">→</span>
+            {{ with .end }}{{ . }}{{ else }}<span class="current">Present</span>{{ end }}
+          </p>
+          <h3 class="tl-role">{{ .designation }}</h3>
+          {{ with .responsibilities }}
+          <ul class="tl-bullets">
+            {{- range . }}<li>{{ . | markdownify }}</li>{{ end }}
+          </ul>
+          {{ end }}
+        </div>
+        {{- end }}
+      </div>
+    </li>
+    {{- end }}
+  </ol>
+</section>
+<script>
+  (function () {
+    var tl = document.querySelector('#experience .timeline');
+    if (!tl) return;
+    var items = tl.querySelectorAll('.tl-item');
+    if (!items.length || !('IntersectionObserver' in window)) return;
+    function activate(item) {
+      for (var i = 0; i < items.length; i++) {
+        items[i].classList.toggle('is-active', items[i] === item);
+      }
+      // fill from the bottom of the rail up to this entry's marker centre
+      var h = tl.offsetHeight - item.offsetTop - 22;
+      tl.style.setProperty('--tl-progress', Math.max(0, h) + 'px');
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    for (var i = 0; i < items.length; i++) { obs.observe(items[i]); }
+  })();
+</script>
