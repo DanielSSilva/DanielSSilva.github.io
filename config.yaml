@@ -1,14 +1,13 @@
 baseURL: https://www.danielssilva.dev
 
-languageCode: en-us
 title: "Daniel Silva"
-theme: "toha"
 
 # Manage languages
 # For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
 languages:
   en:
-    languageName: English
+    locale: en-US
+    label: English
     weight: 1
 
 # Control TOC depth
@@ -30,12 +29,4 @@ params:
   enableBlogPost: false
   logo:
     favicon: "images/favicon.png"
-  footer: 
-    enable: true
-  background: "images/background/background.png"
 
-  features:
-    analytics:
-      enabled: true
-      google:
-        id: G-6H5T7PXLSM
