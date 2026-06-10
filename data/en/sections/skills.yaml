@@ -49,7 +49,6 @@ categories:
   - name: Containers & Orchestration
     tools:
       - { name: Docker, level: 4 }
-      - { name: Compose, level: 4 }
       - { name: Kubernetes, level: 2 }
 
   - name: Other Clouds
